@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Design | Maasai Beadwork</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Maasai Beadwork
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="custom.html">Custom Design</a></li>
+                <li><a href="index.html#story">Our Story</a></li>
+                <li><a href="index.html#visit">Visit Us</a></li>
+            </ul>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+    🌙
+</button>
+
+    </header>
+
+
+    <!-- Custom Design Section -->
+    <main>
+
+        <section class="custom-page">
+
+            <div class="section-heading">
+                <p class="eyebrow">CREATE SOMETHING UNIQUE</p>
+
+                <h1>Request a Custom Design</h1>
+
+                <p>
+                    Have a specific design, colour combination, or size in mind?
+                    Tell us what you'd like and we'll discuss it with you on WhatsApp.
+                </p>
+            </div>
+
+
+            <!-- Custom Form -->
+            <form id="custom-form">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="type">Type of Beadwork</label>
+
+                    <select id="type" required>
+
+                        <option value="">Select one</option>
+
+                        <option value="Necklace">
+                            Necklace
+                        </option>
+
+                        <option value="Bracelet">
+                            Bracelet
+                        </option>
+
+                        <option value="Earrings">
+                            Earrings
+                        </option>
+
+                        <option value="Belt">
+                            Belt
+                        </option>
+
+                        <option value="Bag">
+                            Bag
+                        </option>
+
+                        <option value="Pouch">
+                            Pouch
+                        </option>
+
+                        <option value="Hat / Headwear">
+                            Hat / Headwear
+                        </option>
+
+                        <option value="Outfit">
+                            Outfit
+                        </option>
+
+                        <option value="Sandals">
+                            Sandals
+                        </option>
+
+                        <option value="Mats">
+                            Mats
+                        </option>
+
+                        <option value="Rungu">
+                            Rungu
+                        </option>
+
+                        <option value="Key Holder">
+                            Key Holder
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="colours">Preferred Colours</label>
+
+                    <input
+                        type="text"
+                        id="colours"
+                        placeholder="e.g. Red, blue and white"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="size">Preferred Size</label>
+
+                    <input
+                        type="text"
+                        id="size"
+                        placeholder="e.g. Medium, 18 inches, etc."
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        min="1"
+                        value="1"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="reference">
+                        Reference Product ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reference"
+                        placeholder="e.g. MB-NK-001"
+                    >
+
+                    <small>
+                        If you saw a design you liked, enter its Product ID here.
+                    </small>
+                </div>
+
+
+                <div class="form-group">
+    <label for="details">
+        Tell us what you'd like
+    </label>
+
+    <textarea
+        id="details"
+        rows="6"
+        placeholder="Describe your custom design..."
+        required
+    ></textarea>
+</div>
+
+<div class="inspiration-image">
+    <label>
+        Inspiration Image (Optional)
+    </label>
+
+    <p>
+        Have a design you'd like us to use as inspiration?
+        You can attach the image directly in WhatsApp after submitting your request.
+    </p>
+</div>
+
+
+                <button type="submit" class="btn">
+                    Send Request on WhatsApp
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Maasai Beadwork. Handmade in Kenya.
+        </p>
+    </footer>
+
+
+    <script src="js/custom.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

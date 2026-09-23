@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Collection | Maasai Beadwork</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Maasai Beadwork
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+              <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="custom.html">Custom Design</a></li>
+                <li><a href="index.html#story">Our Story</a></li>
+                <li><a href="index.html#visit">Visit Us</a></li>
+            </ul>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+    🌙
+</button>
+
+        </nav>
+    </header>
+
+
+    <!-- Page Heading -->
+
+    <section class="catalogue-header">
+
+        <p>OUR COLLECTION</p>
+
+        <h1>
+            Discover Our Beadwork
+        </h1>
+
+        <p>
+            Explore our collection and find a piece that speaks to you.
+        </p>
+
+    </section>
+
+
+    <!-- Filters -->
+
+    <section class="catalogue">
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+        >
+    </div>
+
+<div class="sort-box">
+    <label for="sort-select">Sort by:</label>
+<button id="clear-filters" class="clear-filters">
+    Clear Filters
+</button>
+
+    <select id="sort-select">
+        <option value="default">Default</option>
+        <option value="price-low">Price: Low → High</option>
+        <option value="price-high">Price: High → Low</option>
+        <option value="name-az">Name: A → Z</option>
+        <option value="name-za">Name: Z → A</option>
+    </select>
+</div>
+
+    <div class="filters">
+
+ <button class="filter-btn active" data-category="All">All</button>
+<button class="filter-btn" data-category="Necklaces">Necklaces</button>
+<button class="filter-btn" data-category="Bracelets">Bracelets</button>
+<button class="filter-btn" data-category="Earrings">Earrings</button>
+<button class="filter-btn" data-category="Other">Other</button>
+<button class="filter-btn" data-category="Belts">Belts</button>
+<button class="filter-btn" data-category="Beaded Hats">Beaded Hats</button>
+<button class="filter-btn" data-category="Beaded Outfits">Beaded Outfits</button>
+<button class="filter-btn" data-category="Maasai Rungus">Maasai Rungus</button>
+<button class="filter-btn" data-category="Maasai Beaded Sandals">Sandals</button>
+<button class="filter-btn" data-category="Bags">Bags</button>
+<button class="filter-btn" data-category="Pouches">Pouches</button>
+<button class="filter-btn" data-category="Mats">Mats</button>
+<button class="filter-btn" data-category="Headwear">Headwear</button>
+<button class="filter-btn" data-category="Key Holders">Key Holders</button>
+
+        </div>
+
+
+        <!-- Products -->
+
+<p id="product-count" class="product-count">
+    Showing 0 products
+</p>
+
+        <div class="product-grid" id="product-grid">
+        </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Maasai Beadwork
+        </p>
+
+    </footer>
+    <script src="js/products.js"></script>
+    <script src="js/collection.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

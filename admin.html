@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chess Wizard | Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <main class="login-container" id="login-section">
+
+        <div class="login-card">
+
+            <div class="wizard-icon">
+                🧙‍♂️
+            </div>
+
+            <h1>
+                🧙‍♂️ Chess Wizard 🪄
+            </h1>
+
+            <p class="subtitle">
+                Admin Dashboard
+            </p>
+
+            <form id="login-form">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">
+                    Sign In
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <--======-==- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main class="dashboard" id="dashboard-section">
+
+    <header class="dashboard-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🧙‍♂️
+            </div>
+
+            <div>
+                <h1>
+                    Chess Wizard 🪄
+                </h1>
+
+                <p>
+                    Maasai Beadwork Admin
+                </p>
+            </div>
+
+        </div>
+
+        <button
+            id="logout-button"
+            class="logout-button"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+    <section class="dashboard-content">
+
+        <div class="welcome-section">
+
+            <p class="small-heading">
+                ADMIN DASHBOARD
+            </p>
+
+            <h2>
+                Inventory Control
+            </h2>
+
+            <p>
+                Manage your beadwork catalogue and product availability.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-summary">
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    📦
+                </span>
+
+                <div>
+                    <strong id="total-products">
+                        0
+                    </strong>
+
+                    <span>
+                        Total Products
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    🟢
+                </span>
+
+                <div>
+                    <strong id="available-products">
+                        0
+                    </strong>
+
+                    <span>
+                        Available
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    🔴
+                </span>
+
+                <div>
+                    <strong id="sold-products">
+                        0
+                    </strong>
+
+                    <span>
+                        Sold
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+<div class="analytics-summary">
+
+    <div class="summary-card">
+
+        <span class="summary-icon">
+            👁️
+        </span>
+
+        <div>
+            <strong id="total-views">
+                0
+            </strong>
+
+            <span>
+                Total Views
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+        <span class="summary-icon">
+            👤
+        </span>
+
+        <div>
+            <strong id="unique-visitors">
+                0
+            </strong>
+
+            <span>
+                Unique Visitors
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+        <span class="summary-icon">
+            💎
+        </span>
+
+        <div>
+            <strong id="products-viewed">
+                0
+            </strong>
+
+            <span>
+                Products Viewed
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="analytics-panel">
+
+    <div class="analytics-panel-header">
+
+        <div>
+
+            <p class="small-heading">
+                PRODUCT ANALYTICS
+            </p>
+
+            <h2>
+                Most Viewed Products
+            </h2>
+
+            <p>
+                See which beadwork pieces are getting the most attention.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="most-viewed-list"
+        id="most-viewed-list"
+    >
+    </div>
+
+</div>
+
+<div class="analytics-panel">
+
+    <div class="analytics-panel-header">
+        <div>
+            <p class="small-heading">RECENT ACTIVITY</p>
+
+            <h2>
+                Recent Product Views
+            </h2>
+
+            <p>
+                See the latest product activity on the catalogue.
+            </p>
+        </div>
+    </div>
+
+    <div
+        class="recent-activity-list"
+        id="recent-activity-list"
+    ></div>
+
+</div>
+
+
+<div class="analytics-panel">
+
+    <div class="analytics-panel-header">
+        <div>
+            <p class="small-heading">VIEW TRENDS</p>
+
+            <h2>
+                Views Over Time
+            </h2>
+
+            <p>
+                Track how much attention the catalogue is receiving.
+            </p>
+        </div>
+    </div>
+
+<div class="chart-range-buttons">
+
+    <button
+        class="chart-range-button active"
+        data-range="7"
+    >
+        7 Days
+    </button>
+
+    <button
+        class="chart-range-button"
+        data-range="30"
+    >
+        30 Days
+    </button>
+
+    <button
+        class="chart-range-button"
+        data-range="all"
+    >
+        All Time
+    </button>
+
+</div>
+
+    <div class="views-chart-total">
+    <strong id="views-chart-total">0</strong>
+    <span>total views</span>
+</div>
+
+<div class="views-chart-wrapper">
+    <canvas id="views-chart"></canvas>
+</div>
+
+</div>
+
+
+        <div class="inventory-panel">
+
+            <div class="inventory-panel-header">
+
+                <div>
+
+                    <h2>
+                        Products
+                    </h2>
+
+                    <p>
+                        Update product availability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-tools">
+
+                <div class="search-wrapper">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="search"
+                        id="inventory-search"
+                        placeholder="Search by product name or ID..."
+                    >
+
+                </div>
+
+
+                <div class="inventory-filters">
+
+                    <button
+                        class="filter-button active"
+                        data-filter="All"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="Available"
+                    >
+                        Available
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="Sold"
+                    >
+                        Sold
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="inventory-grid"
+                id="inventory-grid"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+      
+                   
+                 
+
+    <script src="js/products.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
