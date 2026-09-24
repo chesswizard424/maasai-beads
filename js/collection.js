@@ -7,7 +7,7 @@ const clearFilters = document.getElementById("clear-filters");
 
 let inventory = {};
 
-fetch("http://10.110.232.180:5000/api/products/inventory")
+fetch("https://YOUR-RENDER-URL.onrender.com/api/products/inventory")
     .then(response => response.json())
     .then(data => {
 

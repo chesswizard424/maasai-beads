@@ -1,4 +1,4 @@
-const API_URL = "http://10.110.232.180:5000";
+const API_URL = "https://YOUR-RENDER-URL.onrender.com";
 
 const loginSection = document.getElementById("login-section");
 const dashboardSection = document.getElementById("dashboard-section");

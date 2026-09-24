@@ -22,7 +22,7 @@ if (product) {
      
     document.getElementById("product-description").textContent = product.description;
 
-   fetch(`http://10.110.232.180:5000/api/products/${encodeURIComponent(productId)}/inventory`)
+   fetch(`https://YOUR-RENDER-URL.onrender.com/api/products/${encodeURIComponent(productId)}/inventory`)
     .then(response => response.json())
     .then(data => {
 
@@ -238,7 +238,7 @@ if (relatedProductsContainer && product) {
 
         // Replace the catalogue status with live database status
         fetch(
-            `http://10.110.232.180:5000/api/products/${encodeURIComponent(id)}/inventory`
+            `https://YOUR-RENDER-URL.onrender.com/api/products/${encodeURIComponent(id)}/inventory`
         )
             .then(response => response.json())
             .then(data => {
@@ -338,7 +338,7 @@ if (product) {
     }
 
     fetch(
-        `http://10.110.232.180:5000/api/products/${encodeURIComponent(productId)}/view`,
+        `https://YOUR-RENDER-URL.onrender.com/api/products/${encodeURIComponent(productId)}/view`,
         {
             method: "POST",
             headers: {

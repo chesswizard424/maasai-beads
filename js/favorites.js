@@ -12,7 +12,7 @@ const favorites =
     JSON.parse(localStorage.getItem("favorites")) || [];
 
 const API_URL =
-    "http://10.110.232.180:5000";
+    "https://YOUR-RENDER-URL.onrender.com";
 
 let inventory = {};
 
