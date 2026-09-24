@@ -19,3 +19,4 @@ __pycache__/
 # Editor temporary files
 *.swp
 *.swo
+render_inventory.sql
