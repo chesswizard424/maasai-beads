@@ -6,6 +6,7 @@ const rateLimit = require("express-rate-limit");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { Pool } = require("pg");
+console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
