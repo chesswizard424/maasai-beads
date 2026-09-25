@@ -2,7 +2,7 @@ console.log("Maasai Beadwork website loaded!");
 
 let inventory = {};
 
-const inventoryPromise = fetch("https://YOUR-RENDER-URL.onrender.com/api/products/inventory")
+const inventoryPromise = fetch("https://maasai-beads-api.onrender.com/api/products/inventory")
     .then(response => response.json())
     .then(data => {
         data.inventory.forEach(item => {
@@ -210,7 +210,7 @@ const mostViewedContainer =
 
 if (mostViewedContainer) {
 
-    fetch("https://YOUR-RENDER-URL.onrender.com/api/products/most-viewed")
+    fetch("https://maasai-beads-api.onrender.com/api/products/most-viewed")
         .then(response => response.json())
         .then(data => {
 

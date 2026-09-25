@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-RENDER-URL.onrender.com";
+const API_URL = "https://maasai-beads-api.onrender.com";
 
 const loginSection = document.getElementById("login-section");
 const dashboardSection = document.getElementById("dashboard-section");

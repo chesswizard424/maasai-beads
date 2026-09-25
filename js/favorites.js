@@ -12,7 +12,7 @@ const favorites =
     JSON.parse(localStorage.getItem("favorites")) || [];
 
 const API_URL =
-    "https://YOUR-RENDER-URL.onrender.com";
+    "https://maasai-beads-api.onrender.com";
 
 let inventory = {};
 

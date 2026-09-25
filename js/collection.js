@@ -7,7 +7,7 @@ const clearFilters = document.getElementById("clear-filters");
 
 let inventory = {};
 
-fetch("https://YOUR-RENDER-URL.onrender.com/api/products/inventory")
+fetch("https://maasai-beads-api.onrender.com/api/products/inventory")
     .then(response => response.json())
     .then(data => {
 
