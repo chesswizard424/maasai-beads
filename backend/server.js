@@ -1,4 +1,9 @@
 require("dotenv").config();
+console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
+console.log("DATABASE_URL host:", process.env.DATABASE_URL
+    ? new URL(process.env.DATABASE_URL).hostname
+    : "NOT SET"
+);
 
 const express = require("express");
 const cors = require("cors");
@@ -6,7 +11,7 @@ const rateLimit = require("express-rate-limit");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { Pool } = require("pg");
-console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -32,11 +37,15 @@ const pool = new Pool(
 // Middleware
 app.use(express.json());
 
+const allowedOrigins = [
+    "http://localhost:8000",
+    "http://10.110.232.180:8000",
+    "https://chesswizard424.github.io"
+];
+
 app.use(cors({
-    origin: [
-        "http://localhost:8000",
-        "http://10.110.232.180:8000"
-    ]
+    origin: allowedOrigins,
+    methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 }));
 
 const viewLimiter = rateLimit({

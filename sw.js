@@ -1,4 +1,4 @@
-const CACHE_NAME = "maasai-beadwork-v11";
+const CACHE_NAME = "maasai-beadwork-v12";
 
 const FILES_TO_CACHE = [
     "./",
